@@ -1,29 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7017850626172116696
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
-  m_Name: WhiteBalance
-  m_EditorClassIdentifier: 
-  active: 0
-  m_AdvancedMode: 0
-  temperature:
-    m_OverrideState: 1
-    m_Value: 36
-    min: -100
-    max: 100
-  tint:
-    m_OverrideState: 0
-    m_Value: 26
-    min: -100
-    max: 100
 --- !u!114 &-2027012204109822385
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -49,7 +25,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.185
+    m_Value: 0.191
     min: 0
     max: 1
   smoothness:
@@ -113,9 +89,47 @@ MonoBehaviour:
   - {fileID: 2779748638760658465}
   - {fileID: -2027012204109822385}
   - {fileID: -1430195921366214139}
-  - {fileID: -7017850626172116696}
   - {fileID: 8985929786199264779}
   - {fileID: 6141378681026608144}
+  - {fileID: 2302656475276103154}
+--- !u!114 &2302656475276103154
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  postExposure:
+    m_OverrideState: 0
+    m_Value: -0.52
+  contrast:
+    m_OverrideState: 0
+    m_Value: -37
+    min: -100
+    max: 100
+  colorFilter:
+    m_OverrideState: 0
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 1
+    showAlpha: 0
+    showEyeDropper: 1
+  hueShift:
+    m_OverrideState: 0
+    m_Value: -180
+    min: -180
+    max: 180
+  saturation:
+    m_OverrideState: 1
+    m_Value: -19
+    min: -100
+    max: 100
 --- !u!114 &2779748638760658465
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -132,7 +146,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.551
+    m_Value: 0.5
     min: 0
     max: 1
 --- !u!114 &6141378681026608144
@@ -147,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 0
@@ -199,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c01700fd266d6914ababb731e09af2eb, type: 3}
   m_Name: DepthOfField
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   m_AdvancedMode: 0
   mode:
     m_OverrideState: 1

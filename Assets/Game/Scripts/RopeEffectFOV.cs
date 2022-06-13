@@ -2,7 +2,7 @@
 
 namespace Game.Scripts
 {
-    public class RopeEffectFOV : MonoBehaviour
+    public class RopeEffectFOV : RopeEffect
     {
         [SerializeField] private float fovMultiplier = 0.9f;
         [SerializeField] private float fadeInSpeed = 1f;
@@ -10,7 +10,6 @@ namespace Game.Scripts
         
         private float _originalFOV;
         private Camera _camera;
-        private bool _onRope;
 
         private void Start()
         {
@@ -20,24 +19,10 @@ namespace Game.Scripts
 
         private void Update()
         {
-            float maxDelta = (_onRope ? fadeInSpeed : fadeOutSpeed) * Time.deltaTime;
+            float maxDelta = (OnRope ? fadeInSpeed : fadeOutSpeed) * Time.deltaTime;
             
             _camera.fieldOfView =
-                Mathf.Lerp(_camera.fieldOfView, _originalFOV * (_onRope ? fovMultiplier : 1), maxDelta);
+                Mathf.Lerp(_camera.fieldOfView, _originalFOV * (OnRope ? fovMultiplier : 1), maxDelta);
         }
-
-        #region Rope Collision
-
-            private void FixedUpdate()
-            {
-                _onRope = false;
-            }
-
-            private void OnCollisionStay()
-            {
-                _onRope = true;
-            }
-
-        #endregion
     }
 }

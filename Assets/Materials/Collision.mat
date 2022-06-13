@@ -50,7 +50,7 @@ Material:
     - _DstBlend: 10
     - _FaceToggle: 1
     - _GridAlpha: 0.3
-    - _GridSize: 0.125
+    - _GridSize: 0.0078125
     - _GridToggle: 0
     - _QueueOffset: 0
     - _SampleGI: 0
@@ -58,6 +58,6 @@ Material:
     - _Surface: 1
     - _ZWrite: 0
     m_Colors:
-    - _BaseColor: {r: 0.39215687, g: 1, b: 0.39215687, a: 0.41960785}
+    - _BaseColor: {r: 0.39215684, g: 1, b: 0.39215684, a: 0.06666667}
     - _Color: {r: 0.39215687, g: 1, b: 0.39215687, a: 0.50980395}
   m_BuildTextureStacks: []
