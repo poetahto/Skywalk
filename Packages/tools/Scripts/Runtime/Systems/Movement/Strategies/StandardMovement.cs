@@ -39,6 +39,8 @@ namespace poetools.Runtime.Systems
 
             private bool IsGrounded => _context.Data.IsGrounded;
 
+            private float TargetSpeed => _context.SpeedMultiplier * speed;
+
         #endregion
 
         #region Methods
@@ -67,7 +69,7 @@ namespace poetools.Runtime.Systems
             private Vector3 CalculateTargetVelocity()
             {
                 Vector3 direction = _context.TargetDirection;
-                Vector3 targetVelocity = new Vector3(direction.x * speed, 0, direction.z * speed);
+                Vector3 targetVelocity = new Vector3(direction.x * TargetSpeed, 0, direction.z * TargetSpeed);
                 targetVelocity = Vector3.ProjectOnPlane(targetVelocity, _context.Data.ContactNormal);
                 return new Vector3(targetVelocity.x, _context.CurrentVelocity.y, targetVelocity.z);
             }
@@ -87,7 +89,7 @@ namespace poetools.Runtime.Systems
         
             private float GetAccelerationDelta(float acceleration)
             {
-                return 1 / acceleration * speed * Time.deltaTime;
+                return 1 / acceleration * TargetSpeed * Time.deltaTime;
             }
 
         #endregion
