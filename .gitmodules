@@ -1,0 +1,3 @@
+[submodule "Packages/GitMerge-for-Unity"]
+	path = Packages/GitMerge-for-Unity
+	url = git@github.com:FlaShG/GitMerge-for-Unity.git

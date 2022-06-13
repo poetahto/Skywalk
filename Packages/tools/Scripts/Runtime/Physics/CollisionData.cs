@@ -17,7 +17,7 @@ public class CollisionData : MonoBehaviour
     [Tooltip("How steep a slope we can climb without slipping.")]
     private float slopeLimitDegrees = 45f;
 
-    [SerializeField] private BoxCollider collider;
+    [SerializeField] private new BoxCollider collider;
     
     [SerializeField]
     [Tooltip("Draws debug information to the screen.")]
