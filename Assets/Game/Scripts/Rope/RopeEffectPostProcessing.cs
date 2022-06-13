@@ -7,8 +7,8 @@ namespace Game.Scripts
     {
         [SerializeField] private Volume postProcessingVolume;
         [SerializeField] private float volumeCutoff = 0.1f;
-        [SerializeField] private float fadeInSpeed = 1f;
-        [SerializeField] private float fadeOutSpeed = 1f;
+        [SerializeField] private float fadeInSpeed = 5f;
+        [SerializeField] private float fadeOutSpeed = 5f;
 
         private void Update()
         {

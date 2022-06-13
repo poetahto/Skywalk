@@ -5,9 +5,9 @@ namespace Game.Scripts
 {
     public class RopeEffectSlowdown : RopeEffect
     {
-        [SerializeField] private float speedMultiplier = 0.75f;
-        [SerializeField] private float fadeInSpeed = 1f;
-        [SerializeField] private float fadeOutSpeed = 1f;
+        [SerializeField] private float speedMultiplier = 0.5f;
+        [SerializeField] private float fadeInSpeed = 10f;
+        [SerializeField] private float fadeOutSpeed = 10f;
         
         private MovementSystem _movementSystem;
         

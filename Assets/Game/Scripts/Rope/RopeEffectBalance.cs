@@ -4,9 +4,9 @@ namespace Game.Scripts
 {
     public class RopeEffectBalance : RopeEffect
     {
-        [SerializeField] private float instabilityAmplitude;
-        [SerializeField] private float instabilityFrequency;
-        [SerializeField] private float correctionSpeed = 1f;
+        [SerializeField] private float instabilityAmplitude = 0.05f;
+        [SerializeField] private float instabilityFrequency = 0.25f;
+        [SerializeField] private float correctionSpeed = 0.25f;
         
         private BalanceSystem _balanceSystem;
         private float _perlinOffset;

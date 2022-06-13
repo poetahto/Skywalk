@@ -4,9 +4,9 @@ namespace Game.Scripts
 {
     public class RopeEffectFOV : RopeEffect
     {
-        [SerializeField] private float fovMultiplier = 0.9f;
-        [SerializeField] private float fadeInSpeed = 1f;
-        [SerializeField] private float fadeOutSpeed = 1f;
+        [SerializeField] private float fovMultiplier = 0.85f;
+        [SerializeField] private float fadeInSpeed = 5f;
+        [SerializeField] private float fadeOutSpeed = 5f;
         
         private float _originalFOV;
         private Camera _camera;
