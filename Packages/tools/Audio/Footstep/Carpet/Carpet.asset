@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78081f5e466b0c24ca2681369a68c3bc, type: 3}
+  m_Name: Carpet
+  m_EditorClassIdentifier: 
+  friction: 4.5
+  stepSound: {fileID: 8300000, guid: a58fa95a9f214824da9ddd07a9dd1b1d, type: 3}
+  jumpSound: {fileID: 8300000, guid: 8ab4b7691d7996e47be8f4eb53f6fc6c, type: 3}
+  landSound: {fileID: 8300000, guid: ff2b00ed1f85a7b4f8241c5daa849c2c, type: 3}

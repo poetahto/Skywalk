@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78081f5e466b0c24ca2681369a68c3bc, type: 3}
+  m_Name: Concrete
+  m_EditorClassIdentifier: 
+  friction: 4.5
+  stepSound: {fileID: 8300000, guid: 2a3ccbfb747df0049bc634dd3b6b1635, type: 3}
+  jumpSound: {fileID: 8300000, guid: c747aa2d88d4ae7439844203da0ccd3f, type: 3}
+  landSound: {fileID: 8300000, guid: 2c0831b8d012e7e4085d32c8b9857ca3, type: 3}
