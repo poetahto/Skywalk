@@ -151,6 +151,12 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "de.thirteenpixels.gitmerge": {
+      "version": "file:GitMerge-for-Unity",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,
