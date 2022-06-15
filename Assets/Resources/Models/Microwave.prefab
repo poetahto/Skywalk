@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6132771082365227297}
   - component: {fileID: 940377971230927101}
   - component: {fileID: 5508414008794252034}
+  - component: {fileID: 1088301182335554269}
   m_Layer: 0
   m_Name: Cylinder_5
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1088301182335554269
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893631063974348056}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 45.45515, y: 24.500772, z: 31.689854}
+  m_Center: {x: 0, y: -0.25038624, z: 0.29871988}
 --- !u!1 &5723601416200282109
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 5723601416200282109}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.015625, y: 0.015625, z: 0.015625}
+  m_LocalScale: {x: 0.01171875, y: 0.01171875, z: 0.01171875}
   m_Children:
   - {fileID: 6132771082365227297}
   m_Father: {fileID: 0}
