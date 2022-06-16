@@ -93,6 +93,7 @@ namespace poetools.Runtime.Systems
                 if (showDebug)
                 {
                     GUILayout.Label($"Current Speed: {CurrentRunningSpeed:F1}");
+                    GUILayout.Label($"Speed Multiplier: {SpeedMultiplier:F1}");
                     GUILayout.Label($"Forward Speed Multiplier: {ForwardSpeedMultiplier:F1}");
                     GUILayout.Label($"Target Direction: {TargetDirection}");
                     

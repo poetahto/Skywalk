@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &614968405
 Transform:
@@ -83,7 +83,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5422815208434758282
 Transform:
@@ -94,7 +94,7 @@ Transform:
   m_GameObject: {fileID: 5422815208434758273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.006, y: 3.08, z: 6.52}
-  m_LocalScale: {x: 0.0875, y: 0.087499, z: 8.026688}
+  m_LocalScale: {x: 0.0875, y: 0.087499, z: 15.148661}
   m_Children:
   - {fileID: 614968405}
   m_Father: {fileID: 0}
@@ -191,8 +191,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fovMultiplier: 0.85
-  fadeInSpeed: 5
-  fadeOutSpeed: 5
 --- !u!114 &5422815208434758283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,8 +204,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMultiplier: 0.5
-  fadeInSpeed: 10
-  fadeOutSpeed: 10
 --- !u!114 &5422815208434758281
 MonoBehaviour:
   m_ObjectHideFlags: 0

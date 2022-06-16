@@ -5,24 +5,26 @@ namespace Game.Scripts
     public class RopeEffectFOV : RopeEffect
     {
         [SerializeField] private float fovMultiplier = 0.85f;
-        [SerializeField] private float fadeInSpeed = 5f;
-        [SerializeField] private float fadeOutSpeed = 5f;
         
         private float _originalFOV;
-        private Camera _camera;
+        private PlayerCamera _camera;
 
         private void Start()
         {
-            _camera = Camera.main;
-            _originalFOV = _camera == null ? 70 :  _camera.fieldOfView;
+            _camera = FindObjectOfType<PlayerCamera>();
+            _originalFOV = _camera == null ? 70 :  _camera.FieldOfView;
         }
 
-        private void Update()
+        protected override void OnRopeEnter()
         {
-            float maxDelta = (OnRope ? fadeInSpeed : fadeOutSpeed) * Time.deltaTime;
-            
-            _camera.fieldOfView =
-                Mathf.Lerp(_camera.fieldOfView, _originalFOV * (OnRope ? fovMultiplier : 1), maxDelta);
+            base.OnRopeEnter();
+            _camera.FieldOfView = _originalFOV * fovMultiplier;
+        }
+
+        protected override void OnRopeExit()
+        {
+            base.OnRopeExit();
+            _camera.FieldOfView = _originalFOV;
         }
     }
 }

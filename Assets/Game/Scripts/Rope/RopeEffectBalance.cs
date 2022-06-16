@@ -37,11 +37,7 @@ namespace Game.Scripts
                 _balanceSystem.Destabilize(_velocity);
             }
 
-            else
-            {
-                _balanceSystem.Stabilize();
-                _velocity = 0;
-            }
+            else _velocity = 0;
         }
     }
 }

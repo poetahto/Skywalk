@@ -1,4 +1,5 @@
-﻿using poetools.Runtime.Systems;
+﻿using System;
+using poetools.Runtime.Systems;
 using UnityEngine;
 
 namespace Game.Scripts
@@ -11,9 +12,23 @@ namespace Game.Scripts
         [SerializeField] private float stabilizeSpeed = 1f;
         [SerializeField] private float fallThreshold = 45f;
         [SerializeField] private float fallSpeed = 1f;
+
+        private bool _destabilized;
         
+        private void LateUpdate()
+        {
+            if (_destabilized == false)
+            {
+                Stabilize();
+            }
+            
+            _destabilized = false;
+        }
+
         public void Destabilize(float amount)
         {
+            _destabilized = true;
+            
             rotationSystem.Roll += amount;
             
             if (rotationSystem.Roll > fallThreshold)
