@@ -37,7 +37,7 @@ Material:
     - _DstBlend: 10
     - _FaceToggle: 1
     - _GridAlpha: 0.3
-    - _GridSize: 0.25
+    - _GridSize: 0.0625
     - _GridToggle: 0
     - _QueueOffset: 0
     - _SampleGI: 0
