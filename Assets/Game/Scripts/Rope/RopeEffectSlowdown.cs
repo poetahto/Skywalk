@@ -6,8 +6,6 @@ namespace Game.Scripts
     public class RopeEffectSlowdown : RopeEffect
     {
         [SerializeField] private float speedMultiplier = 0.5f;
-        [SerializeField] private float fadeInSpeed = 10f;
-        [SerializeField] private float fadeOutSpeed = 10f;
         
         private MovementSystem _movementSystem;
         
@@ -16,10 +14,16 @@ namespace Game.Scripts
             _movementSystem = FindObjectOfType<MovementSystem>();
         }
 
-        private void Update()
+        protected override void OnRopeEnter()
         {
-            float maxDelta = (OnRope ? fadeInSpeed : fadeOutSpeed) * Time.deltaTime;
-            _movementSystem.SpeedMultiplier = Mathf.Lerp(_movementSystem.SpeedMultiplier, OnRope ? speedMultiplier : 1, maxDelta);
+            base.OnRopeEnter();
+            _movementSystem.SpeedMultiplier = speedMultiplier;
+        }
+
+        protected override void OnRopeExit()
+        {
+            base.OnRopeExit();
+            _movementSystem.SpeedMultiplier = 1;
         }
     }
 }
