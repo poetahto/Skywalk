@@ -13,13 +13,15 @@ namespace poetools
         private bool quitOnEscape;
 
         [SerializeField] 
-        private bool hideCursor;
+        private Optional<bool> hideCursor;
 
         private void Update()
         {
             UpdateQuitOnEscape();
-            UpdateHideCursor();
             UpdateShowFPS();
+
+            if (hideCursor.shouldBeUsed)
+                UpdateHideCursor();
         }
 
         private void UpdateQuitOnEscape()
@@ -35,8 +37,8 @@ namespace poetools
 
         private void UpdateHideCursor()
         {
-            Cursor.visible = !hideCursor;
-            Cursor.lockState = hideCursor ? CursorLockMode.Locked : CursorLockMode.None;
+            Cursor.visible = !hideCursor.value;
+            Cursor.lockState = hideCursor.value ? CursorLockMode.Locked : CursorLockMode.None;
         }
 
         private void UpdateShowFPS()
