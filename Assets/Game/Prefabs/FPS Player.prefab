@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 7433109500361121643}
   - component: {fileID: 6221890360916268573}
   - component: {fileID: 762782123}
+  - component: {fileID: 8234179091684434065}
   m_Layer: 0
   m_Name: FPS Player
   m_TagString: Untagged
@@ -378,6 +379,23 @@ MonoBehaviour:
   stabilizeSpeed: 5
   fallThreshold: 35
   fallSpeed: 0.25
+--- !u!114 &8234179091684434065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025217867054788779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1e0c49f6a6963a4e83fb01303fd18a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showDebug: 0
+  ignoredLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  lookDirection: {fileID: 2025217868510051651}
 --- !u!1 &2025217868510051652
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +571,7 @@ GameObject:
   - component: {fileID: 1788270170362463718}
   - component: {fileID: 6796739573271859956}
   - component: {fileID: 3292115304711621764}
+  - component: {fileID: 100747658365374618}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -618,6 +637,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controls: {fileID: 11400000, guid: 08ea60f0065079a40af59dbb6ea5adb6, type: 2}
   system: {fileID: 6221890360916268573}
+--- !u!114 &100747658365374618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750213511923816531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42cdc0db8b6514c40bcb407f165e8c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  system: {fileID: 8234179091684434065}
+  controls: {fileID: 11400000, guid: 08ea60f0065079a40af59dbb6ea5adb6, type: 2}
+  scrollWheelSpeed: 0.5
+  interactableDistance: 0.75
 --- !u!1 &6906711153597058693
 GameObject:
   m_ObjectHideFlags: 0

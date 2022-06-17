@@ -87,6 +87,15 @@ public class InteractionSystem : MonoBehaviour
             return isInteractable && isInRange;
         }
 
+        if (lookingAtObject && hitInfo.rigidbody == null)
+        {
+            bool isInteractable = hitInfo.collider.TryGetComponent(out result);
+            bool isInRange = isInteractable && hitInfo.distance <= result.InteractRange;
+            point = hitInfo.point;
+            
+            return isInteractable && isInRange;
+        }
+
         point = Vector3.zero;
         result = null;
         return false;
