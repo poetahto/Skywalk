@@ -43,10 +43,12 @@ namespace Game.Scripts
 
         private IEnumerator Start()
         {
-            if (openDelay)
+            if (openDelay) { 
                 yield return new WaitForSeconds(delayTime);
+                Open();
+            }
 
-            Open();
+
         }
 
         private IEnumerator DoorAnimateCoroutine(
