@@ -133,7 +133,9 @@ namespace poetools.Runtime.Systems
             bool rising = targetRigidbody.velocity.y > 0;
             float currentGravity = jumpSettings.GetCurrentGravity(rising, holdingJump);
             
-            customGravity.gravityMagnitude = collisionData.IsGrounded ? 0 : currentGravity;
+            // customGravity.gravityMagnitude = collisionData.IsGrounded ? 0 : currentGravity;
+            
+            customGravity.gravityMagnitude = currentGravity;
         }
     }
 }

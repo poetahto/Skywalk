@@ -70,7 +70,7 @@ namespace poetools.Runtime.Systems
             {
                 Vector3 direction = _context.TargetDirection;
                 Vector3 targetVelocity = new Vector3(direction.x * TargetSpeed, 0, direction.z * TargetSpeed);
-                targetVelocity = Vector3.ProjectOnPlane(targetVelocity, _context.Data.ContactNormal);
+                // targetVelocity = Vector3.ProjectOnPlane(targetVelocity, _context.Data.ContactNormal);
                 return new Vector3(targetVelocity.x, _context.CurrentVelocity.y, targetVelocity.z);
             }
 

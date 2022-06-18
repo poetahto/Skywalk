@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Game/Maps/prototype_zigzag.unity
+    guid: 7ea7479669fb6a1429707ddda9423479
+  - enabled: 1
     path: Assets/Game/Maps/main menu.unity
     guid: ba0dda3a79bf3354aae45a59b9c6915c
   - enabled: 1

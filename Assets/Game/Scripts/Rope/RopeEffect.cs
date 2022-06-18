@@ -40,7 +40,10 @@ namespace Game.Scripts
             {
                 if (collision.contactCount > 0)
                 {
-                    OnRope = collision.GetContact(0).normal == Vector3.down;
+                    // OnRope = collision.GetContact(0).normal == Vector3.down;
+                    float angle = Vector3.Angle(collision.GetContact(0).normal, Vector3.down);
+                    OnRope = angle < 90;
+                    print(angle);
                 }
             }
 
