@@ -14,16 +14,25 @@ public struct CollisionEvents
 [RequireComponent(typeof(Collider))]
 public class Trigger : MonoBehaviour
 {
+    [SerializeField] bool triggerOnce;
     public CollisionEvents events;
+
+    bool _isTriggered;
     
     private void Awake()
     {
+        _isTriggered = false;
         GetComponent<Collider>().isTrigger = true;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        events.collisionEnter?.Invoke(other);
+        if (!triggerOnce || !_isTriggered)
+        {
+            events.collisionEnter?.Invoke(other);
+            _isTriggered = true;
+        }
+        
     }
 
     private void OnTriggerExit(Collider other)
