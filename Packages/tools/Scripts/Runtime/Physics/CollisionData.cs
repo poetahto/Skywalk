@@ -17,7 +17,7 @@ public class CollisionData : MonoBehaviour
     [Tooltip("How steep a slope we can climb without slipping.")]
     private float slopeLimitDegrees = 45f;
 
-    [SerializeField] private new BoxCollider collider;
+    [SerializeField] private new CapsuleCollider collider;
     
     [SerializeField]
     [Tooltip("Draws debug information to the screen.")]
@@ -126,7 +126,8 @@ public class CollisionData : MonoBehaviour
     private void CheckIsGrounded()
     {
         var ray = new Ray(baseTransform.position, -baseTransform.up);
-        IsGrounded = Physics.BoxCast(collider.transform.position, collider.bounds.extents * 0.9f, Vector3.down, out var hitInfo, Quaternion.identity, groundDistance);
+        // IsGrounded = Physics.BoxCast(collider.transform.position, collider.bounds.extents * 0.9f, Vector3.down, out var hitInfo, Quaternion.identity, groundDistance);
+        IsGrounded = Physics.SphereCast(collider.transform.position,collider.radius, -transform.up, out var hitInfo, groundDistance);
         ConnectedCollider = hitInfo.collider;
         ContactNormal = hitInfo.normal;
     }
