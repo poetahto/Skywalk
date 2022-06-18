@@ -36,6 +36,16 @@ public class SceneTransitionSystem : MonoBehaviour
             return _instance;
         }
     }
+
+    public void FadeIn()
+    {
+        
+    }
+
+    public void FadeOut()
+    {
+        
+    }
     
     public void TransitionToScene(string sceneName, Action postLoadCallback = null)
     {
