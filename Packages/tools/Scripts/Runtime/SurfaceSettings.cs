@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using FMODUnity;
+using UnityEngine;
 
 [CreateAssetMenu]
 public class SurfaceSettings : ScriptableObject
@@ -7,14 +8,14 @@ public class SurfaceSettings : ScriptableObject
     [SerializeField] private float friction = 4.5f;
         
     [Header("Audio Settings")]
-    [SerializeField] private AudioClip stepSound;
-    [SerializeField] private AudioClip jumpSound;
-    [SerializeField] private AudioClip landSound;
+    [SerializeField] private EventReference stepSound;
+    [SerializeField] private EventReference jumpSound;
+    [SerializeField] private EventReference landSound;
         
     // ---- Properties ----
 
     public float Friction => friction;
-    public AudioClip StepSound => stepSound;
-    public AudioClip JumpSound => jumpSound;
-    public AudioClip LandSound => landSound;
+    public EventReference StepSound => stepSound;
+    public EventReference JumpSound => jumpSound;
+    public EventReference LandSound => landSound;
 }

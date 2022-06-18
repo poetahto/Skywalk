@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1358135041901000586}
   - component: {fileID: 547108914681958859}
   - component: {fileID: 33428143772891323}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4207280992069319152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 6221890360916268573}
   - component: {fileID: 762782123}
   - component: {fileID: 8234179091684434065}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FPS Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -391,10 +391,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e0c49f6a6963a4e83fb01303fd18a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showDebug: 0
+  showDebug: 1
   ignoredLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   lookDirection: {fileID: 2025217868510051651}
 --- !u!1 &2025217868510051652
 GameObject:
@@ -406,10 +406,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2025217868510051651}
   - component: {fileID: 2025217868510051650}
-  - component: {fileID: 2025217868510051653}
   - component: {fileID: 2066059947}
   - component: {fileID: 8924941067938885915}
-  m_Layer: 0
+  - component: {fileID: 9120647222720408849}
+  m_Layer: 6
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -473,14 +473,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2025217868510051653
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2025217868510051652}
-  m_Enabled: 1
 --- !u!114 &2066059947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +520,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fovIncreaseSpeed: 5
   fovDecreaseSpeed: 5
+--- !u!114 &9120647222720408849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025217868510051652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &2560242027470978515
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4100090817086139488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Yaw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +577,7 @@ GameObject:
   - component: {fileID: 6796739573271859956}
   - component: {fileID: 3292115304711621764}
   - component: {fileID: 100747658365374618}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Controllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -637,6 +642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controls: {fileID: 11400000, guid: 08ea60f0065079a40af59dbb6ea5adb6, type: 2}
   system: {fileID: 6221890360916268573}
+  hideCursor: 1
 --- !u!114 &100747658365374618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,7 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 837582441611948228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Roll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -693,7 +699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3497857004935145908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -727,7 +733,7 @@ GameObject:
   - component: {fileID: 3541656646087477578}
   - component: {fileID: 3833732279017389281}
   - component: {fileID: 3137102305292528669}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}

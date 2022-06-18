@@ -1,4 +1,5 @@
-﻿using JetBrains.Annotations;
+﻿using FMODUnity;
+using JetBrains.Annotations;
 using poetools;
 using UnityEngine;
 
@@ -19,7 +20,8 @@ public class MovementAudio : MonoBehaviour
     private void Awake()
     {
         collisionData.onEnterCollision.AddListener((col1, col2) => _displacement = 0);
-        _displacement = stepDistance;
+        // _displacement = stepDistance;
+        _previousPosition = transform.position; 
     }
 
     private void Update()
@@ -44,21 +46,24 @@ public class MovementAudio : MonoBehaviour
         _displacement = 0;
             
         SurfaceSettings settings = GetCurrentSettings();
-        audioSource.PlayOneShot(settings.StepSound, 0.5f);
+        RuntimeManager.PlayOneShot(settings.StepSound);
+        // audioSource.PlayOneShot(settings.StepSound, 0.5f);
     }
 
     [PublicAPI]
     public void PlayJumpSound()
     {
         SurfaceSettings settings = GetCurrentSettings();
-        audioSource.PlayOneShot(settings.JumpSound, 1f);
+        RuntimeManager.PlayOneShot(settings.JumpSound);
+        // audioSource.PlayOneShot(settings.JumpSound, 1f);
     }
 
     [PublicAPI]
     public void PlayLandSound()
     {
         SurfaceSettings settings = GetCurrentSettings();
-        audioSource.PlayOneShot(settings.LandSound, 0.25f);
+        RuntimeManager.PlayOneShot(settings.LandSound);
+        // audioSource.PlayOneShot(settings.LandSound, 0.25f);
     }
 
     private SurfaceSettings GetCurrentSettings()
