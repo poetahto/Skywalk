@@ -15,14 +15,13 @@ namespace Game.Scripts
         [SerializeField] private Transform leftDoor;
         [SerializeField] private Transform rightDoor;
         [SerializeField] private Collider lockCollider;
+        [SerializeField] private float OpenAmount = 0.9f;
         [SerializeField] private UnityEvent onDoorsOpen;
         [SerializeField] private UnityEvent onDoorsClose;
 
         [Header("Delay")]
         [SerializeField] private bool openDelay;
         [SerializeField] private float delayTime;
-        
-        private const float OpenAmount = 0.9f;
 
         private Vector3 _leftOpen;
         private Vector3 _leftClosed;
