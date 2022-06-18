@@ -22,7 +22,8 @@ namespace Game.Scripts
 
             private void FixedUpdate()
             {
-                OnRope = false;
+                if (ElapsedTime > 0.25f)
+                    OnRope = false;
             }
 
             private void Update()
@@ -36,13 +37,18 @@ namespace Game.Scripts
                 _wasOnRope = OnRope;
             }
 
+            private float _lastCheckTime = 0;
+            private float ElapsedTime => Time.time - _lastCheckTime;
+            
             private void OnCollisionStay(Collision collision)
             {
-                if (collision.contactCount > 0)
+                if (collision.contactCount > 0 && ElapsedTime > 0.25f)
                 {
                     // OnRope = collision.GetContact(0).normal == Vector3.down;
-                    float angle = Vector3.Angle(collision.GetContact(0).normal, Vector3.down);
-                    OnRope = angle < 90;
+                    // float angle = Vector3.Angle(collision.GetContact(0).normal, Vector3.down);
+                    // OnRope = angle < 90;
+                    OnRope = true;
+                    _lastCheckTime = Time.time;
                 }
             }
 
